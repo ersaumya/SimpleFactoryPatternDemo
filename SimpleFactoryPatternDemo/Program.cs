@@ -1,4 +1,7 @@
-﻿using System;
+﻿using SimpleFactory;
+using SimpleFactory.ConcreteFactory;
+using SimpleFactory.Product;
+using System;
 
 namespace SimpleFactoryPatternDemo
 {
@@ -6,7 +9,9 @@ namespace SimpleFactoryPatternDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            IMobile mobile = MobileFactory.CreateMobile(BrandType.Apple);
+            mobile.GetMobile();
+            Console.ReadKey();
         }
     }
 }
